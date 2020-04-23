@@ -26,6 +26,41 @@ Arrays for example has the method `.push()` and `.pop()` which can add and remov
 
 Strings on the other hand have methods such as `.toUpperCase()` which transforms the string to uppercase.
 
+
+| Property | Description 
+| ------- | ------------- 
+| length    | returns number of elements in the array
+
+| Method | Description 
+| ------- | ------------- 
+| pop()    | `removes last element` from the array
+| push(ekement) | `adds element` to the end of an array
+| reverse() | `reverses` the order of an array
+| shift() | `removes` the first element of an array
+| sort() | [sorts array by converting elements to utf-16 first and  then comparing them](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+| concat(value or array) | `joins parameters to the current array`, then returns it as new array
+| includes("match") | `searches for argument` in array, then returns true or false
+| join() | `returns all elements as one strings`
+| slice([n, n]) | `extracts n to n` as new array
+| toString() | returns array as string 
+
+```js
+* array mapping
+let listOfNumbers = [11, 2, 3, 5, 7];
+
+console.log(
+  listOfNumbers.map(index => {console.log(index)})
+)
+
+// → 11
+// → 2
+// → 3
+// → 5
+// → 7
+
+```
+
+
 #### Objects
 `Objects` are very similar to arrays, it can store all kinds of data, even arrays. In objects data is stored as `key:value` so that means each key will have a value. Objects are usefull to fill dynamically.
 
@@ -50,6 +85,19 @@ console.log(Object.keys(objectSet))
 ```
 ##### Context
 It is possible to refer to a value inside the array by calling its key (or by prefixing it with `this.`).
+
+| Method | Description 
+| ------- | ------------- 
+| Object.assign(`sourceArray`, `targetArray`)    | pastes target to source as new object
+| Object.Create(`object`) | turns variable to new object using data from the old object  
+| Object.defineProperties(`object`, `key`: {`value`: 11}) | adds new key:value pair
+| Object.entries(`object`) | returns all key:value pairs as arrays
+| Object.freeze(`object`) | makes object read-only
+| Object. is(`val1`, `val2`) | compares values, returns boolean
+| Object.isFrozen(`object`) | returns boolean
+| Object.keys(`object`) | returns all keys as object
+| Object.value(`object`) | returns all values as object
+
 
 **sidenote: null vs undefined**
 >| null | undefined 
