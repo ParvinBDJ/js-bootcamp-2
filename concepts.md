@@ -80,3 +80,21 @@ num = 6; // initialization
 ```
 [See more](https://developer.mozilla.org/en-US/docs/Glossary/Hoisting)
 
+### Closures
+
+Met het concept van closures kunnen functions wel naar variabelen buiten hun eigen block zien (zoals de in parent function of een global variable) maar kunnen andere stukken code niet de variabelen zien die gedeclareerd zijn binnenin functions (door scoping)
+
+```js
+function init() {
+  let name = 'Mozilla'; // name is a local variable created by init
+  function displayName() { // displayName() is the inner function, a closure
+    console.log(name); // use variable declared in the parent function
+    let aaa ="aaa"
+  }
+  displayName();
+  console.log(aaa) // cant see in child parent
+}
+init();
+```
+
+[See more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
